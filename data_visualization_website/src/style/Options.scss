@@ -1,0 +1,33 @@
+@import "./Variables.scss";
+
+.top-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+
+    .top-right {
+        margin-left: 2rem;
+    }
+
+    .top-left {
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            
+            background-color: $color-primary;
+            border-style: none;
+
+            &:hover {
+                background-color: darken($color-primary, 10%);
+                cursor: pointer;
+            }
+        }
+    }
+}
+

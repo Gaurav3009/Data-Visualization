@@ -1,0 +1,51 @@
+@import "./Variables.scss";
+
+@mixin displayFlex($dir, $just) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: center;
+}
+.top {
+    @include displayFlex(column, space-between);
+    padding: 3rem;
+    
+
+    .top-heading {
+        margin-bottom: 3rem;
+    }
+
+    form {
+        input {
+            margin: 1rem;
+        }
+    }
+
+    .button {
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
+        
+        background-color: $color-primary;
+        border-style: none;
+
+        &:hover {
+            background-color: darken($color-primary, 10%);
+            cursor: pointer;
+        }
+    }
+}
+
+.top-upload {
+    @include displayFlex(row, space-evenly);
+    flex-direction: row;
+    
+    p {
+        margin-left: 2rem;
+        font-style: italic;
+        color: $text-gray;
+    }
+
+    button {
+        margin: 2rem;
+    }
+}

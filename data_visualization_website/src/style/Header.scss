@@ -1,0 +1,66 @@
+// Variables
+@import "./Variables.scss";
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: space-evenly;
+}
+nav {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 10vh;
+    padding: 1rem;
+
+    .heading {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        h1 {
+            letter-spacing: 0.5rem;
+            color: $text-gray;
+        }
+    }
+
+    .nav-left {
+
+        img {
+            border-radius: 10%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .nav-right {
+        @include displayFlex;
+        float: left;
+        align-items: center;
+        width: 40%;
+
+        .nav-right--links {
+            width: 50%;
+            @include displayFlex;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .nav-right--btns {
+            width: 50%;
+            @include displayFlex;
+            
+            button {
+                padding: 0.5rem 1.5rem;
+                border-radius: 1rem;
+                color: $color-secondary;
+                background-color: $color-tertiary;
+                border-style: none;
+
+                &:hover {
+                    background-color: darken($color-tertiary, 10%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
